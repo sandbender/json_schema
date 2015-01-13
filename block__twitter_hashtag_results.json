@@ -13,10 +13,10 @@ twitter_hashtag_results_block = {
         {
             "action": "convert",
             "action_params": {
-                "conversion": [SENTINEL, SENTINEL + "//statuses", {
-                    "id": SENTINEL + "/id_str",
-                    "content": SENTINEL + "/text",
-                    "user": SENTINEL + "/user/screen_name"}],
+                "conversion": ["\x01", "\x01//statuses", {
+                    "id": "\x01/id_str",
+                    "content": "\x01/text",
+                    "user": "\x01/user/screen_name"}],
             }
         }
     ],
