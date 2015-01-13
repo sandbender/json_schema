@@ -4,22 +4,22 @@
         {
             "action": "uri_get",
             "action_params": {
-                "uri": "https://api.twitter.com/1.1/search/tweets.json?q=%23\x01//hashtag\x02&since_id=\x01//output_state/last_id\x02",
+                "uri": "https://api.twitter.com/1.1/search/tweets.json?q=%23\u0001//hashtag\u0002&since_id=\u0001//output_state/last_id\u0002",
                 "auth_type": "oauth1",
                 "response_type": "json",
-                "auth_domain": "api.twitter.com",
+                "auth_domain": "api.twitter.com"
             }
         },
         {
             "action": "convert",
             "action_params": {
-                "conversion": ["\x01", "\x01//statuses", {
-                    "id": "\x01/id_str",
-                    "content": "\x01/text",
-                    "user": "\x01/user/screen_name"}],
+                "conversion": ["\u0001", "\u0001//statuses", {
+                    "id": "\u0001/id_str",
+                    "content": "\u0001/text",
+                    "user": "\u0001/user/screen_name"}]
             }
         }
     ],
-    "state": {"input": {}, "output": {"last_id": "\x01//\x01-1/id"}},
+    "state": {"input": {}, "output": {"last_id": "\u0001//\u0001-1/id"}},
     "initial_state": {"input": {}, "output": {"last_id": 0}}
 }
