@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__new_tweet-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "content": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 140,
+            "title": "Contents of new tweet"
+        }
+    },
+    "required": ["io", "actions", "state"]
+}

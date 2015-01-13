@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-block_type-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "io": {
+            "type": "object",
+            "properties": {
+                "input": {
+                    "type": ["null", "string", "array"],
+                    "items": {"type": "string"},
+                    "maxItems": 1
+                },
+                "output": {
+                    "type": ["null", "string", "array"],
+                    "items": {"type": "string"},
+                    "maxItems": 1
+                }
+            },
+            "required": ["input", "output"]
+        },
+        "actions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "action": {"type": "string", "enum": ["uri_get",
+                                                          "debug",
+                                                          "convert"]},
+                    "action_params": {"type": ["object", "null"]}
+                },
+                "required": ["action", "action_params"]
+            }
+        },
+        "state": {
+            "type": "object",
+            "properties": {
+                "input": {
+                    "type": "object",
+                    "additionalProperties": {"type": ["object", "array", "string", "null"]}
+                },
+                "output": {
+                    "type": "object",
+                    "additionalProperties": {"type": ["object", "array", "string", "null"]}
+                }
+            },
+            "required": ["input", "output"]
+        },
+        "initial_state": {
+            "type": "object",
+            "properties": {
+                "input": {
+                    "type": "object",
+                    "additionalProperties": true
+                },
+                "output": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["input", "output"]
+        }
+    },
+    "required": ["io", "actions", "state", "initial_state"]
+}
