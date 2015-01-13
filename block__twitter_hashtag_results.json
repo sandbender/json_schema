@@ -1,0 +1,25 @@
+twitter_hashtag_results_block = {
+    "io": {"input": "twitter_hashtag_search", "output": ["tweet"]},
+    "actions": [
+        {
+            "action": "uri_get",
+            "action_params": {
+                "uri": "https://api.twitter.com/1.1/search/tweets.json?q=%23\x01//hashtag\x02&since_id=\x01//output_state/last_id\x02",
+                "auth_type": "oauth1",
+                "response_type": "json",
+                "auth_domain": "api.twitter.com",
+            }
+        },
+        {
+            "action": "convert",
+            "action_params": {
+                "conversion": [SENTINEL, SENTINEL + "//statuses", {
+                    "id": SENTINEL + "/id_str",
+                    "content": SENTINEL + "/text",
+                    "user": SENTINEL + "/user/screen_name"}],
+            }
+        }
+    ],
+    "state": {"input": {}, "output": {"last_id": "\x01//\x01-1/id"}},
+    "initial_state": {"input": {}, "output": {"last_id": 0}}
+}
