@@ -1,4 +1,4 @@
-twitter_hashtag_results_block = {
+{
     "io": {"input": "twitter_hashtag_search", "output": ["tweet"]},
     "actions": [
         {
