@@ -3,7 +3,7 @@
     "title": "Kragle-data_type_gui-schema-v1.0",
     "type": "object",
     "properties": {
-        "$schema": {"type": "string": "enum": ["http://json-schema.org/draft-04/schema#"]},
+        "$schema": {"type": "string", "enum": ["http://json-schema.org/draft-04/schema#"]},
         "title": {"type": "string"},
         "type": {"type": "string", "enum": ["object"]},
         "properties": {
