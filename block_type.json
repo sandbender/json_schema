@@ -24,13 +24,59 @@
             "minItems": 1,
             "items": {
                 "type": "object",
-                "properties": {
-                    "action": {"type": "string", "enum": ["uri_get",
-                                                          "debug",
-                                                          "convert"]},
-                    "action_params": {"type": ["object", "null"]}
-                },
-                "required": ["action", "action_params"]
+                "oneOf": [
+                    {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["uri_get",
+                                                          "uri_head",
+                                                          "uri_get_with_headers",
+                                                          "uri_head_with_headers"]},
+                            "action_params": {
+                                "type": "object",
+                                "properties": {
+                                    "uri": {"type": "string"},
+                                    "headers": {"type": "object", "additionalProperties": {"type": "string"}},
+                                    "auth_required": {"type": "boolean"}
+                                },
+                                "required": ["uri"]
+                            }
+                        },
+                        "required": ["action", "action_params"]
+                    }, {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["uri_post", "uri_post_with_headers"]},
+                            "action_params": {
+                                "type": "object",
+                                "properties": {
+                                    "uri": {"type": "string"},
+                                    "headers": {"type": "object", "additionalProperties": {"type": "string"}},
+                                    "body": {"type": "object"},
+                                    "auth_required": {"type": "boolean"}
+                                },
+                                "required": ["uri"]
+                            }
+                        },
+                        "required": ["action", "action_params"]
+                    }, {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["debug"]},
+                            "action_params": {"type": "object"}
+                        },
+                        "required": ["action", "action_params"]
+                    }, {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["convert"]},
+                            "action_params": {
+                                "type": "object",
+                                "properties": {
+                                    "conversion": {"type": ["object", "array", "string", "null"]},
+                                },
+                                "required": ["conversion"]
+                            }
+                        },
+                        "required": ["action", "action_params"]
+                    }
+                ]
             }
         },
         "state": {
