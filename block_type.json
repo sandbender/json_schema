@@ -36,6 +36,7 @@
                                 "properties": {
                                     "uri": {"type": "string"},
                                     "headers": {"type": "object", "additionalProperties": {"type": "string"}},
+                                    "response_type": {"type": "string", "enum": ["string", "json"]},
                                     "auth_required": {"type": "boolean"},
                                     "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
                                 },
@@ -52,6 +53,7 @@
                                 "properties": {
                                     "uri": {"type": "string"},
                                     "headers": {"type": "object", "additionalProperties": {"type": "string"}},
+                                    "response_type": {"type": "string", "enum": ["string", "json"]},
                                     "body": {"type": "string"},
                                     "auth_required": {"type": "boolean"},
                                     "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
