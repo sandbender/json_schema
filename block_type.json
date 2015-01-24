@@ -52,7 +52,7 @@
                                 "properties": {
                                     "uri": {"type": "string"},
                                     "headers": {"type": "object", "additionalProperties": {"type": "string"}},
-                                    "body": {"type": "object"},
+                                    "body": {"type": "string"},
                                     "auth_required": {"type": "boolean"},
                                     "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
                                 },
