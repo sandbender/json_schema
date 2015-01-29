@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__deicious_tag_search-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "type": "string",
+            "title": "Find recent Delicious posts tagged with this",
+            "minLength": 1
+        }
+    },
+    "required": ["tag"]
+}

@@ -14,5 +14,5 @@
         },
         "id": {"type": "integer"}
     },
-    "required": ["io", "actions", "state"]
+    "required": ["id", "user", "content"]
 }
