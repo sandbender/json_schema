@@ -81,6 +81,19 @@
                             }
                         },
                         "required": ["action", "action_params"]
+                    }, {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["exclude_in"]},
+                            "action_params": {
+                                "type": "object",
+                                "properties": {
+                                    "exclusions": {"type": ["object", "array", "string", "null"]},
+                                    "element_path": {"type": ["object", "array", "string", "null"]}
+                                },
+                                "required": ["exclusions", "element_path"]
+                            }
+                        },
+                        "required": ["action", "action_params"]
                     }
                 ]
             }

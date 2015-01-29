@@ -1,0 +1,33 @@
+{
+    "io": {"input": "delicious_tag_search", "output": ["delicious_post"]},
+    "actions": [
+        {
+            "action": "uri_get",
+            "action_params": {
+                "uri": "https://api.del.icio.us/v1/posts/get?tag=\u0001/tag\u0001&meta=yes",
+                "auth_required": true,
+                "response_type": "xml"
+            }
+        },
+        {
+            "action": "convert",
+            "action_params": {
+                "conversion": ["\u0001", "\u0001/_children", {
+                    "description": "\u0001//description",
+                    "url": "\u0001//href",
+                    "tags": "\u0001%SPLIT_ON_CHAR('\u0001//tag\u0002', ' ')",
+                    "hash": "\u0001//hash"
+                }]
+            }
+        },
+        {
+            "action": "exclude_in",
+            "action_params": {
+                "exclusions": "\u0001/output_state/hashes",
+                "element_path": "\u0001/hash"
+            }
+        }
+    ],
+    "state": {"input": {}, "output": {"hashes": ["\u0001", "\u0001/_children", "\u0001//hash"]}},
+    "initial_state": {"input": {}, "output": {"hashes": []}}
+}
