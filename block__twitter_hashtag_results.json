@@ -6,6 +6,7 @@
             "action_params": {
                 "uri": "https://api.twitter.com/1.1/search/tweets.json?q=%23\u0001//hashtag\u0002&since_id=\u0001//output_state/last_id\u0002",
                 "auth_required": true,
+                "auth_type": "strategy",
                 "response_type": "json"
             }
         },
