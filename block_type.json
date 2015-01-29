@@ -36,7 +36,7 @@
                                 "properties": {
                                     "uri": {"type": "string"},
                                     "headers": {"type": "object", "additionalProperties": {"type": "string"}},
-                                    "response_type": {"type": "string", "enum": ["string", "json"]},
+                                    "response_type": {"type": "string", "enum": ["string", "json", "xml"]},
                                     "auth_required": {"type": "boolean"},
                                     "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
                                 },
@@ -75,7 +75,7 @@
                             "action_params": {
                                 "type": "object",
                                 "properties": {
-                                    "conversion": {"type": ["object", "array", "string", "null"]},
+                                    "conversion": {"type": ["object", "array", "string", "null"]}
                                 },
                                 "required": ["conversion"]
                             }
