@@ -29,6 +29,6 @@
             }
         }
     ],
-    "state": {"input": {}, "output": {"hashes": ["\u0001", "\u0001/_children", "\u0001//hash"]}},
+    "state": {"input": {}, "output": {"hashes": ["\u0001", "\u0001/", "\u0001//hash"]}},
     "initial_state": {"input": {}, "output": {"hashes": []}}
 }

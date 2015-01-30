@@ -94,6 +94,12 @@
                             }
                         },
                         "required": ["action", "action_params"]
+                    }, {
+                        "properties": {
+                            "action": {"type": "string", "enum": ["take_first", "take_last"]},
+                            "action_params": {"type": "object"}
+                        },
+                        "required": ["action", "action_params"]
                     }
                 ]
             }
