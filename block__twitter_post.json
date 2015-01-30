@@ -1,0 +1,16 @@
+{
+    "io": {"input": "tweet", "output": None},
+    "actions": [
+        {
+            "action": "uri_post",
+            "action_params": {
+                "uri": "https://api.twitter.com/1.1/statuses/update.json?status=\u0001\u0001%URLENCODE_PLUS('\u0001\u0001/content\u0002\u0002')\u0002\u0002",
+                "auth_required": true,
+                "auth_type": "strategy",
+                "response_type": "json"
+            }
+        }
+    ],
+    "state": {"input": {}, "output": {}},
+    "initial_state": {"input": {}, "output": {}}
+}

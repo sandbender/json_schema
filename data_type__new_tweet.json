@@ -10,5 +10,5 @@
             "title": "Contents of new tweet"
         }
     },
-    "required": ["io", "actions", "state"]
+    "required": ["content"]
 }
