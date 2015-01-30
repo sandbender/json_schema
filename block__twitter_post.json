@@ -1,5 +1,5 @@
 {
-    "io": {"input": "tweet", "output": None},
+    "io": {"input": "tweet", "output": null},
     "actions": [
         {
             "action": "uri_post",
