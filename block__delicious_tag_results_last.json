@@ -4,7 +4,7 @@
         {
             "action": "uri_get",
             "action_params": {
-                "uri": "https://api.del.icio.us/v1/posts/get?tag=\u0001/tag\u0001&meta=yes",
+                "uri": "https://api.del.icio.us/v1/posts/get?tag=\u0001/tag\u0002&meta=yes",
                 "auth_required": true,
                 "auth_type": "strategy",
                 "response_type": "xml"
