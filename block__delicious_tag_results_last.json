@@ -25,7 +25,7 @@
             "action": "exclude_in",
             "action_params": {
                 "exclusions": "\u0001/output_state/hashes",
-                "element_path": "\u0001/hash"
+                "element_path": "/hash"
             }
         },
         {
