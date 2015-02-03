@@ -14,10 +14,10 @@
             "action": "convert",
             "action_params": {
                 "conversion": ["\u0001", "\u0001/input/_children", {
-                    "description": "\u0001//description",
-                    "url": "\u0001//href",
-                    "tags": "\u0001%SPLIT_ON_CHAR('\u0001\u0001//tag\u0002\u0002', ' ')",
-                    "hash": "\u0001//hash"
+                    "description": "\u0001/description",
+                    "url": "\u0001/href",
+                    "tags": "\u0001%SPLIT_ON_CHAR('\u0001\u0001/tag\u0002\u0002', ' ')",
+                    "hash": "\u0001/hash"
                 }]
             }
         },
