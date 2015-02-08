@@ -10,6 +10,6 @@
             }
         }
     ],
-    "state": {"input": {}, "output": {}},
+    "state": {"input": {}, "output": {"debug": "\u0001/"}},
     "initial_state": {"input": {}, "output": {}}
 }
