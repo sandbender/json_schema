@@ -1,5 +1,5 @@
 {
-    "io": {"input": "delicious_tag_search", "output": "delicious_post"},
+    "io": {"input": "Delicious Tag Search", "output": "Delicious Post"},
     "actions": [
         {
             "action": "uri_get",

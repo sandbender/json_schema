@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__hipchat_message_to_room-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "room_id": {"type": "string", "minLength": 1},
+        "content": {"type": "string"},
+        "auth_token": {"type": "string", "minLength": 1}
+    },
+    "required": ["room_id", "content", "auth_token"]
+}

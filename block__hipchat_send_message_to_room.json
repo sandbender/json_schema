@@ -1,5 +1,5 @@
 {
-    "io": {"input": "hipchat_message_to_room", "output": null},
+    "io": {"input": "HipChat - New Message for Room", "output": null},
     "actions": [
         {
             "action": "uri_post",
