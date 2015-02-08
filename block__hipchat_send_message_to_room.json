@@ -6,7 +6,7 @@
             "action_params": {
                 "uri": "https://api.hipchat.com/v1/rooms/message?auth_token=\u0001\u0001/input/auth_token\u0002\u0002&format=json",
                 "response_type": "json",
-                "body": "room_id=\u0001\u0001/input/room_id\u0002\u0002&from=Delicious+Kragle&message=\u0001\u0001/input/content\u0002\u0002"
+                "body": "room_id=\u0001\u0001/input/room_id\u0002\u0002&from=Delicious+Kragle&message=\u0001\u0001%URLENCODE_PLUS(\u0001\u0001/input/content\u0002\u0002)\u0002\u0002"
             }
         }
     ],
