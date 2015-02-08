@@ -8,7 +8,7 @@
                 "response_type": "json",
                 "body": "room_id=\u0001\u0001/input/room_id\u0002\u0002&from=Delicious+Kragle&message=\u0001\u0001/input/content\u0002\u0002"
             }
-        },
+        }
     ],
     "state": {"input": {}, "output": {}},
     "initial_state": {"input": {}, "output": {}}
