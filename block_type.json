@@ -87,7 +87,7 @@
                             "action_params": {
                                 "type": "object",
                                 "properties": {
-                                    "exclusions": {"type": "array"},
+                                    "exclusions": {"type": ["object", "array", "string", "null"]},
                                     "element_path": {"type": ["object", "array", "string", "null"]}
                                 },
                                 "required": ["exclusions", "element_path"]
@@ -100,7 +100,7 @@
                             "action_params": {
                                 "type": "object",
                                 "properties": {
-                                    "exclusions": {"type": "array"}
+                                    "exclusions": {"type": ["object", "array", "string", "null"]}
                                 },
                                 "required": ["exclusions"]
                             }
