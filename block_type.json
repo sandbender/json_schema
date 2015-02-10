@@ -70,6 +70,58 @@
                         },
                         "required": ["action", "action_params"]
                     }, {
+                       "properties": {
+                           "action": {"type": "string", "enum": ["read_instance_state"]},
+                           "action_params": {
+                               "type": "object",
+                               "properties": {
+                                   "id": {"type": "string"}
+                               },
+                               "required": ["id"]
+                           }
+                       },
+                       "required": ["action", "action_params"]
+                    }, {
+                       "properties": {
+                           "action": {"type": "string", "enum": ["write_instance_state"]},
+                           "action_params": {
+                               "type": "object",
+                               "properties": {
+                                   "id": {"type": "string"},
+                                   "new_state": {"type": "object"},
+                                   "predicate": {"type": "object"}
+                               },
+                               "required": ["id", "new_state"]
+                           }
+                       },
+                       "required": ["action", "action_params"]
+                    }, {
+                       "properties": {
+                           "action": {"type": "string", "enum": ["predicate_match", "predicate_not_match"]},
+                           "action_params": {
+                               "type": "object",
+                               "properties": {
+                                   "test": {"type": "string"},
+                                   "value": {"type": "string"}
+                               },
+                               "required": ["test", "value"]
+                           }
+                       },
+                       "required": ["action", "action_params"]
+                    }, {
+                       "properties": {
+                           "action": {"type": "string", "enum": ["predicate_re_match", "predicate_not_re_match"]},
+                           "action_params": {
+                               "type": "object",
+                               "properties": {
+                                   "test": {"type": "string"},
+                                   "expr": {"type": "string"}
+                               },
+                               "required": ["test", "expr"]
+                           }
+                       },
+                       "required": ["action", "action_params"]
+                    }, {
                         "properties": {
                             "action": {"type": "string", "enum": ["convert"]},
                             "action_params": {
