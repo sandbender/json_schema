@@ -38,7 +38,13 @@
                                     "headers": {"type": "object", "additionalProperties": {"type": "string"}},
                                     "response_type": {"type": "string", "enum": ["string", "json", "xml"]},
                                     "auth_required": {"type": "boolean"},
-                                    "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
+                                    "auth_type": {"type": "string", "enum": ["strategy", "basic"]},
+                                    "auth_meta": {
+                                        "type": "object",
+                                        "properties": {
+                                            "scope": {"type": "string"}
+                                        }
+                                    }
                                 },
                                 "dependencies": {"auth_required": ["auth_type"]},
                                 "required": ["uri"]
@@ -56,7 +62,13 @@
                                     "response_type": {"type": "string", "enum": ["string", "json"]},
                                     "body": {"type": "string"},
                                     "auth_required": {"type": "boolean"},
-                                    "auth_type": {"type": "string", "enum": ["strategy", "basic"]}
+                                    "auth_type": {"type": "string", "enum": ["strategy", "basic"]},
+                                    "auth_meta": {
+                                        "type": "object",
+                                        "properties": {
+                                            "scope": {"type": "string"}
+                                        }
+                                    }
                                 },
                                 "dependencies": {"auth_required": ["auth_type"]},
                                 "required": ["uri"]
