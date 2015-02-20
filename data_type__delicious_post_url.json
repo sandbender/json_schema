@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__delicious_post_url-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "url": {"type": "string"}
+    },
+    "required": ["url"]
+}

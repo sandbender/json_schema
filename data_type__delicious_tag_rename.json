@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__delicious_tag_rename-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "tag": {
+            "type": "string",
+            "title": "Tag name",
+            "minLength": 1
+        },
+        "oldtag": {
+            "type": "string",
+            "title": "Old Tag name",
+            "minLength": 1
+        }
+    },
+    "required": ["tag", "oldtag"]
+}
