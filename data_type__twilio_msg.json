@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Kragle-data_type__twilio_msg-schema-v1.0",
+    "type": "object",
+    "properties": {
+        "MessageSid": {
+            "type": "string",
+            "minLength": 34, 
+            "maxLength": 34 
+        },
+        "AccountSid": {
+            "type": "string",
+            "minLength": 34, 
+            "maxLength": 34 
+        },
+        "MessagingServiceSid": {
+            "type": "string",
+            "minLength": 34, 
+            "maxLength": 34 
+        },
+        "From": {
+            "type": "string",
+            "minLength": 1
+        },
+        "To": {
+            "type": "string",
+            "minLength": 1
+        },
+        "Body": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["MessageSid", "AccountSid", "MessagingServiceSid", "From", "To", "Body"]
+}
